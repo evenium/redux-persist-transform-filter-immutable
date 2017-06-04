@@ -1,11 +1,13 @@
 import { Iterable, Map } from 'immutable';
+import type { KeyedCollection, IndexedSeq } from 'immutable';
 import { createTransform } from 'redux-persist';
 import get from 'lodash.get';
 import set from 'lodash.set';
-import isUndefined from 'lodash.isUndefined';
+import isUndefined from 'lodash.isundefined';
+import isString from 'lodash.isstring';
 
 
-export type returnType = Map<string, any> | {[key: string]: any};
+export type returnType = KeyedCollection<string, any> | {[key: string]: any};
 
 export default (reducerName: string, inboundPaths: string | string[], outboundPaths: string | string[]) => {
     return createTransform(
@@ -17,12 +19,12 @@ export default (reducerName: string, inboundPaths: string | string[], outboundPa
 
 export function persistFilter (state: any, paths: string | string[] = []): returnType {
     let iterable: boolean  = Iterable.isIterable(state);
-    let subset: returnType = iterable ? Map<string, any>({}) : {};
-    
-    (_.isString(paths) ? [paths] : <Array<string>>paths).forEach((path: string) => {
+    let subset: returnType = iterable ? Map({}) : {};
+
+    (isString(paths) ? [paths] : paths).forEach((path: string) => {
         let value = iterable ? state.get(path) : get(state, path);
         if(!isUndefined(value)) {
-            iterable ? (subset = (<Map<string, any>>subset).set(path, value)) : set(subset, path, value);
+            iterable ? (subset = (subset).set(path, value)) : set(subset, path, value);
         }
     });
 
