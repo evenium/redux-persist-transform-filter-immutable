@@ -2,9 +2,9 @@
 
 Filter transformator for redux-persist supporting immutable.js
 
-## Installation [WIP - not published to NPM yet :-(]
+## Installation
 ```
-  npm install redux-persist-transform-filter
+  npm install redux-persist-transform-filter-immutable
 ```
 
 ## Usage
