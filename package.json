@@ -29,7 +29,7 @@
   "dependencies": {
     "lodash.get": "^4.4.2",
     "lodash.set": "^4.3.2",
-    "lodash.isUndefined": "^4.3.2",
+    "lodash.isundefined": "^4.3.2",
     "immutable": "^3.8.1"
   },
   "devDependencies": {
