@@ -1,6 +1,6 @@
 {
   "name": "redux-persist-transform-filter-immutable",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Filter transformator for redux-persist supporting immutable.js",
   "main": "dist/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actra-development/redux-persist-transform-filter-immutable.git"
+    "url": "git+https://github.com/ntucker/redux-persist-transform-filter-immutable.git"
   },
   "keywords": [
     "react",
@@ -21,15 +21,22 @@
     "immutable"
   ],
   "author": "Gabriel Schuster <github.com@actra.de>",
+  "contributors": [
+    {
+      "name": "Nathaniel Tucker",
+      "email": "me@ntucker.me",
+      "url": "http://ntucker.me"
+    }
+  ],
   "license": "MIT",
-  "homepage": "https://github.com/actra-development/redux-persist-transform-filter-immutable#readme",
+  "homepage": "https://github.com/ntucker/redux-persist-transform-filter-immutable#readme",
   "bugs": {
-    "url": "https://github.com/actra-development/redux-persist-transform-filter-immutable/issues"
+    "url": "https://github.com/ntucker/redux-persist-transform-filter-immutable/issues"
   },
   "dependencies": {
     "lodash.get": "^4.4.2",
     "lodash.set": "^4.3.2",
-    "lodash.isundefined": "^4.3.2",
+    "lodash.isundefined": "^3.0.1",
     "immutable": "^3.8.1"
   },
   "devDependencies": {
