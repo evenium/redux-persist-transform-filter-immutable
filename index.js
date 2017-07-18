@@ -21,10 +21,10 @@ export function persistFilter (state: any, paths: string | string[] = []): retur
     let iterable: boolean  = Iterable.isIterable(state);
     let subset: returnType = iterable ? Map({}) : {};
 
-    (isString(paths) ? [paths] : paths).forEach((path: string) => {
-        let value = iterable ? state.get(path) : get(state, path);
+    (isString(paths) ? [paths] : paths).forEach((path: string | string[]) => {
+        let value = iterable ? state[isString(path) ? 'get' : 'getIn'](path) : get(state, path);
         if(!isUndefined(value)) {
-            iterable ? (subset = (subset).set(path, value)) : set(subset, path, value);
+            iterable ? (subset = (subset)[isString(path) ? 'set' : 'setIn'](path, value)) : set(subset, path, value);
         }
     });
 

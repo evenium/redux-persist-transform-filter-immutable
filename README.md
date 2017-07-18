@@ -33,6 +33,13 @@ const saveAndloadSubsetFilter = createFilter(
   ['three', 'four']
 );
 
+// deeply nested values can be used via arrays as path
+const nestedSubsetFilter = createFilter(
+  'myReducerThree',
+  [['my', 'path'], ['my', 'other', 'path']],
+  [['my', 'path'], ['my', 'other', 'path']]
+);
+
 persistStore(store, {
   transforms: [
     saveSubsetFilter,
