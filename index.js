@@ -1,4 +1,4 @@
-import { Iterable, Map } from 'immutable';
+import { isCollection, Map } from 'immutable';
 import type { KeyedCollection, IndexedSeq } from 'immutable';
 import { createTransform } from 'redux-persist';
 import get from 'lodash.get';
@@ -18,7 +18,7 @@ export default (reducerName: string, inboundPaths: string | string[], outboundPa
 };
 
 export function persistFilter (state: any, paths: string | string[] = []): returnType {
-    let iterable: boolean  = Iterable.isIterable(state);
+    let iterable: boolean  = isCollection(state);
     let subset: returnType = iterable ? Map({}) : {};
 
     (isString(paths) ? [paths] : paths).forEach((path: string | string[]) => {

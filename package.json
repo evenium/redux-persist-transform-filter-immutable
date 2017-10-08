@@ -35,7 +35,7 @@
     "url": "https://github.com/ntucker/redux-persist-transform-filter-immutable/issues"
   },
   "dependencies": {
-    "immutable": "^3.8.1",
+    "immutable": "^4.0.0-rc.7",
     "lodash.get": "^4.4.2",
     "lodash.isstring": "^4.0.1",
     "lodash.isundefined": "^3.0.1",
