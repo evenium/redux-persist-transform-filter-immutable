@@ -1,6 +1,6 @@
 import { isCollection, Map } from 'immutable';
 import type { KeyedCollection, IndexedSeq } from 'immutable';
-import { createTransform } from 'redux-persist';
+import { createTransform } from '@evenium/redux-persist';
 import get from 'lodash.get';
 import set from 'lodash.set';
 import isUndefined from 'lodash.isundefined';
