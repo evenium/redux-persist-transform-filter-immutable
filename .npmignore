@@ -1,0 +1,17 @@
+node_modules/
+build/
+dist/
+gradle/
+.gradle/
+.settings/
+*.log
+.idea
+.vscode
+.github
+.yarnrc
+*.iml
+.gitattributes
+.gitignore
+
+**/__test__/
+

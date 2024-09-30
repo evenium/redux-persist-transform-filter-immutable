@@ -1,16 +1,16 @@
 {
-  "name": "redux-persist-transform-filter-immutable",
-  "version": "0.3.0",
+  "name": "@evenium/redux-persist-transform-filter-immutable",
+  "version": "0.3.1",
   "description": "Filter transformator for redux-persist supporting immutable.js",
   "main": "dist/index.js",
   "scripts": {
     "build": "mkdir -p dist && babel index.js -o dist/index.js",
-    "prepublishOnly": "npm build",
-    "release": "npm build && release-it"
+    "prepublishOnly": "npm run build",
+    "release": "npm run build && release-it"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ntucker/redux-persist-transform-filter-immutable.git"
+    "url": "git+https://github.com/evenium/redux-persist-transform-filter-immutable.git"
   },
   "keywords": [
     "react",
@@ -21,7 +21,7 @@
     "filter",
     "immutable"
   ],
-  "author": "Gabriel Schuster <github.com@actra.de>",
+  "author": "Willysama <wlawson@evenium.us>",
   "contributors": [
     {
       "name": "Nathaniel Tucker",
@@ -30,9 +30,9 @@
     }
   ],
   "license": "MIT",
-  "homepage": "https://github.com/ntucker/redux-persist-transform-filter-immutable#readme",
+  "homepage": "https://github.com/evenium/redux-persist-transform-filter-immutable#readme",
   "bugs": {
-    "url": "https://github.com/ntucker/redux-persist-transform-filter-immutable/issues"
+    "url": "https://github.com/evenium/redux-persist-transform-filter-immutable/issues"
   },
   "dependencies": {
     "immutable": "^4.0.0-rc.7",
